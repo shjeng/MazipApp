@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'red',
     flexDirection: 'row', // column이 기본 값
     alignItems: 'center',
+    justifyContent: 'space-evenly',
   }
 });
 
