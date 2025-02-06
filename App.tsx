@@ -11,9 +11,7 @@ function App(): React.JSX.Element {
   );
 }
 
-const styles = StyleSheet.create({
-
-});
+const styles = StyleSheet.create({});
 
 // flexDirection이 column이 기본
 // display: flex는 생략해도 됨.
