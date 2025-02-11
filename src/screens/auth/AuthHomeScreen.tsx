@@ -2,7 +2,7 @@ import React from 'react';
 import {Button, SafeAreaView, StyleSheet, View} from 'react-native';
 import {StackScreenProps} from '@react-navigation/stack';
 import {AuthStackParamList} from '../../navigations/stack/AuthStackNavigator.tsx';
-import {authNavigations} from '../../constants';
+import {authNavigations} from '../../constants/navigations.ts';
 import CustomButton from '../../components/CustomButton.tsx';
 
 type AuthHomeScreenProps = StackScreenProps<
@@ -16,7 +16,6 @@ const AuthHomeScreen = ({navigation}: AuthHomeScreenProps) => {
       <View>
         <CustomButton
           label="로그인하기"
-          size={'medium'}
           onPress={() => navigation.navigate(authNavigations.LOGIN)}
         />
         <CustomButton

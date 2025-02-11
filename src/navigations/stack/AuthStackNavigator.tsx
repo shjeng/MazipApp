@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 import AuthHomeScreen from '../../screens/auth/AuthHomeScreen.tsx';
 import LoginScreen from '../../screens/auth/LoginScreen.tsx';
-import {authNavigations} from '../../constants';
+import {authNavigations} from '../../constants/navigations.ts';
 import SignupScreen from '../../screens/auth/SignupScreen.tsx';
 
 export type AuthStackParamList = {

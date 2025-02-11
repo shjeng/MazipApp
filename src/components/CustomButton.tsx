@@ -6,6 +6,7 @@ import {
   PressableProps,
   Dimensions,
 } from 'react-native';
+import {colors} from '../constants';
 
 /*
  * onPress를 일일이 다 적어주지 않고 PressableProps를 상속받아주면 편함.
@@ -23,18 +24,18 @@ const CustomButton = ({
   label,
   variant = 'filled',
   size = 'large',
-  inValid = true,
+  inValid = false,
   ...props // prop
 }: CustomButtonProps) => {
   Dimensions.get('window').height;
   return (
     <Pressable
       disabled={inValid}
-      style={[
+      style={({pressed}) => [
         styles.container,
-        styles[variant],
         styles[size],
         inValid && styles.inValid,
+        pressed ? styles[`${variant}Pressed`] : styles[variant],
       ]}
       {...props}>
       <Text style={[styles.text, styles[`${variant}Text`]]}>{label}</Text>
@@ -51,11 +52,19 @@ const styles = StyleSheet.create({
     opacity: 0.5,
   },
   filled: {
-    backgroundColor: '#C63B64',
+    backgroundColor: colors.PINK_700,
   },
   outlined: {
-    borderColor: '#C63B64',
+    borderColor: colors.PINK_700,
     borderWidth: 1,
+  },
+  filledPressed: {
+    backgroundColor: colors.PINK_500
+  },
+  outlinedPressed: {
+    backgroundColor: colors.PINK_500,
+    borderWidth: 1,
+    opacity: 0.5
   },
   large: {
     width: '100%',
@@ -75,7 +84,7 @@ const styles = StyleSheet.create({
   },
 
   filledText: {
-    color: 'white',
+    color: colors.WITHE,
   },
   outlinedText: {},
 });
