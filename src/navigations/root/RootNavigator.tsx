@@ -4,7 +4,7 @@ import MainDrawerNavigator from '../drawer/MainDrawerNavigator.tsx';
 
 const RootNavigator = () => {
   const isLoggedIn = false;
-  return <>{isLoggedIn ? <MainDrawerNavigator /> : <AuthStackNavigator />}</>
+  return <>{isLoggedIn ? <MainDrawerNavigator /> : <AuthStackNavigator />}</>;
 };
 
 export default RootNavigator;
